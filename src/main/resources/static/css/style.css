@@ -1,0 +1,51 @@
+/* Custom styles for the home welcome page */
+:root{
+  --primary:#0d6efd;
+  --muted:#6c757d;
+}
+
+body{
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
+  color: #222;
+}
+
+.hero-card{
+  background: linear-gradient(180deg, #ffffffcc, #f8f9ffcc);
+  border-radius: 12px;
+  display: inline-block;
+}
+
+.lead{
+  color: var(--muted);
+}
+
+.card-link{
+  color: var(--primary);
+}
+
+footer{
+  border-top: 1px solid #e9ecef;
+}
+
+@media (max-width: 767px){
+  .hero-card img{ max-width: 100px }
+}
+
+/* Make the home image responsive and 'fixed' to the viewport on larger screens */
+.homeimg{
+  width:100%;
+  height:auto;
+  max-width:340px;
+  object-fit:contain;
+  display:block;
+  margin:0 auto;
+}
+
+@media (min-width: 992px){
+  /* On large screens, keep the hero-card visible while scrolling */
+  .col-lg-5 .hero-card{
+    position:sticky;
+    top:120px; /* adjust as needed to align under navbar */
+  }
+}

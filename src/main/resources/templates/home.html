@@ -1,0 +1,26 @@
+<div th:replace="/commons/header.html"></div>
+<div th:replace="/commons/navbar.html"></div>
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-lg-7">
+						<h1 class="display-5 fw-bold">Welcome to the Student Management System</h1>
+						<p class="lead">Simple Spring MVC app to manage students. Create, edit, list and delete student records.</p>
+						<div class="mt-4">
+							<a class="btn btn-primary btn-lg me-2" th:href="@{/students}">View Students</a>
+							<a class="btn btn-outline-primary btn-lg" th:href="@{/students/new}">Add Student</a>
+						</div>
+					</div>
+					<div class="col-lg-5 d-none d-lg-block text-center">
+						<div class="hero-card shadow-lg p-4 rounded">
+							<img th:src="@{/img/student1.png}" alt="Student illustration" class="homeimg">
+						</div>
+					</div>
+				</div>
+
+			</div>
+            <div style="min-height: 32vh;">
+    
+            </div>
+		</main>
+
+	<div th:replace="/commons/footer.html"></div>
