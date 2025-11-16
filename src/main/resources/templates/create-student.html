@@ -13,7 +13,8 @@
                                 name="firstName"
                                 th:field="*{firstName}"
                                 class="form-control"
-                                placeholder="Enter First Name"
+                            placeholder="Enter First Name"
+                            required
                         />
                     </div>
                     <div class="form-group mb-3">
@@ -23,7 +24,8 @@
                                 name="lastName"
                                 th:field="*{lastName}"
                                 class="form-control"
-                                placeholder="Enter Last Name"
+                            placeholder="Enter Last Name"
+                            required
                         />
                     </div>
                     <div class="form-group mb-3">
@@ -33,7 +35,8 @@
                                 name="email"
                                 th:field="*{email}"
                                 class="form-control"
-                                placeholder="Enter Email"
+                            placeholder="Enter Email"
+                            required
                         />
                     </div>
                     <div class="form-group mb-3">
@@ -43,14 +46,14 @@
                                 name="course"
                                 th:field="*{course}"
                                 class="form-control"
-                                placeholder="Enter Course"
+                            placeholder="Enter Course"
+                            required
                         />
                     </div>
 
-                    <div class="box-footer">
-                        <button type="submit" class="btn btn-primary">
-                            Submit
-                        </button>
+                    <div class="box-footer d-flex align-items-center">
+                        <a th:href="@{/students}" class="btn btn-danger">Cancel</a>
+                        <button type="submit" class="btn btn-primary ms-auto">Submit</button>
                     </div>
                 </form>
             </div>

@@ -30,11 +30,20 @@
             <td th:text="${student.course}"></td>
             <td>
                 <a th:href="@{/students/edit/{id}(id=${student.id})}" class="btn btn-primary">Update</a>
-                <a th:href="@{/students/delete/{id}(id=${student.id})}" class="btn btn-danger">Delete</a>
+                <button type="button" class="btn btn-danger ms-2 btn-delete"
+                        th:attr="data-student-id=${student.id},data-student-name=${student.firstName + ' ' + student.lastName}">
+                    Delete
+                </button>
             </td>
         </tr>
         </tbody>
     </table>
+    <!-- Delete modal fragment -->
+    <div th:replace="/fragments/delete-modal.html :: deleteModal"></div>
 </div>
+
+<!-- Delete JS -->
+<script th:src="@{/js/delete.js}"></script>
+
 <div th:replace="/commons/footer.html"></div>
 
