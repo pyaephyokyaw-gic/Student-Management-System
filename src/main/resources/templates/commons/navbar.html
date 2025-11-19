@@ -1,14 +1,21 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 			<div class="container">
-				<a class="navbar-brand" th:href="@{/}">Student Management</a>
+				<a class="navbar-brand" th:href="@{/}" th:text="#{nav.brand}">Student Management</a>
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 				<div class="collapse navbar-collapse" id="navMain">
 					<ul class="navbar-nav ms-auto">
-						<li class="nav-item"><a class="nav-link" th:href="@{/}">Home</a></li>
-						<li class="nav-item"><a class="nav-link" th:href="@{/students}">Students</a></li>
-						<li class="nav-item"><a class="nav-link" th:href="@{/students/new}">Create Student</a></li>
+						<li class="nav-item"><a class="nav-link" th:href="@{/}" th:text="#{nav.home}">Home</a></li>
+						<li class="nav-item"><a class="nav-link" th:href="@{/students}" th:text="#{nav.students}">Students</a></li>
+						<li class="nav-item"><a class="nav-link" th:href="@{/students/new}" th:text="#{nav.create}">Create Student</a></li>
+						<li class="nav-item d-flex align-items-center">
+							<span class="navbar-text me-2" th:text="#{lang.eng}">EN</span>
+							<div class="form-check form-switch">
+								<input class="form-check-input" type="checkbox" id="languageSwitch" role="switch">
+								<label class="form-check-label text-white ms-1" for="languageSwitch" th:text="#{lang.ja}">JA</label>
+							</div>
+						</li>
 					</ul>
 				</div>
 			</div>

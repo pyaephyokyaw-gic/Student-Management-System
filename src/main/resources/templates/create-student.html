@@ -3,57 +3,57 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
-                    <h1 class="text-center">Create New Student</h1>
+                    <h1 class="text-center" th:text="#{create.title}">Create New Student</h1>
                     <div class="card-body">
                         <form th:action="@{/students}" th:object="${student}" method="POST">
                     <div class="form-group mb-3">
-                        <label>First Name</label>
+                        <label th:text="#{create.firstName}">First Name</label>
                         <input
                                 type="text"
                                 name="firstName"
                                 th:field="*{firstName}"
                                 class="form-control"
-                            placeholder="Enter First Name"
+                            th:placeholder="#{create.firstName.placeholder}"
                             required
                         />
                     </div>
                     <div class="form-group mb-3">
-                        <label>Last Name</label>
+                        <label th:text="#{create.lastName}">Last Name</label>
                         <input
                                 type="text"
                                 name="lastName"
                                 th:field="*{lastName}"
                                 class="form-control"
-                            placeholder="Enter Last Name"
+                            th:placeholder="#{create.lastName.placeholder}"
                             required
                         />
                     </div>
                     <div class="form-group mb-3">
-                        <label>Email</label>
+                        <label th:text="#{create.email}">Email</label>
                         <input
                                 type="email"
                                 name="email"
                                 th:field="*{email}"
                                 class="form-control"
-                            placeholder="Enter Email"
+                            th:placeholder="#{create.email.placeholder}"
                             required
                         />
                     </div>
                     <div class="form-group mb-3">
-                        <label>Course</label>
+                        <label th:text="#{create.course}">Course</label>
                         <input
                                 type="text"
                                 name="course"
                                 th:field="*{course}"
                                 class="form-control"
-                            placeholder="Enter Course"
+                            th:placeholder="#{create.course.placeholder}"
                             required
                         />
                     </div>
 
                     <div class="box-footer d-flex align-items-center">
-                        <a th:href="@{/students}" class="btn btn-danger">Cancel</a>
-                        <button type="submit" class="btn btn-primary ms-auto">Submit</button>
+                        <a th:href="@{/students}" class="btn btn-danger" th:text="#{create.cancel}">Cancel</a>
+                        <button type="submit" class="btn btn-primary ms-auto" th:text="#{create.submit}">Submit</button>
                     </div>
                 </form>
             </div>
