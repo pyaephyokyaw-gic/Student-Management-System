@@ -1,5 +1,4 @@
-package com.springmvc.student_management_system.model;
-
+package com.springmvc.student_management_system.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -10,7 +9,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "students") 
-public class Student {
+public class StudentEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -29,13 +28,11 @@ public class Student {
     private String course;
 
     // Default constructor
-    public Student() {
-
+    public StudentEntity() {
     }
     
     // Constructor with parameters
-    public Student(String firstName, String lastName, String email, String course) {
-        super();
+    public StudentEntity(String firstName, String lastName, String email, String course) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;

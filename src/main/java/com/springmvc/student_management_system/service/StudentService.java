@@ -1,18 +1,17 @@
 package com.springmvc.student_management_system.service;
 
-
 import java.util.List;
 
-import com.springmvc.student_management_system.model.Student;
+import com.springmvc.student_management_system.dto.StudentDto;
 
 public interface StudentService {
-    List<Student> getAllStudents();
+    List<StudentDto> getAllStudents();
 
-    Student saveStudent(Student student);
+    StudentDto saveStudent(StudentDto studentDto);
 
-    Student getStudentById(Long id);
+    StudentDto getStudentById(Long id);
 
-    Student updateStudent(Student student);
+    StudentDto updateStudent(Long id, StudentDto studentDto);
 
     void deleteStudentById(Long id);
 }
